@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+        <title>Web sitio do João</title>
+    </head>
+    <body style="background-color: grey">
+        
+        <div class="wordart col-xs-12">
+            <span class="text">Web sitio da musica do João!!</span>
+        </div>
+        <div id="content-container" class ="col-xs-12">
+
+            <div class="col-xs-12">
+                <iframe src="https://open.spotify.com/embed/playlist/58HJCRcv3Kd8N8eMfyCRio" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" class="spotify-element"></iframe>
+            </div>
+
+            <div class="col-xs-12 wordart">
+                <span class="text"> Gostastes da experiencia musical? </span> 
+            </div>
+            <div class="col-xs-12">
+                <div class="d-flex align-items-center justify-content-center">
+                    <button id="ye-button" type="button" class="btn btn-success p-2 bd-highlight col-example">Sim</button>
+                    <button id="not-button" type="button" class="btn btn-danger p-2 bd-highlight col-example">Não</button>
+                </div>
+
+                <div class="col-xs-12 wordart">
+                    <p id='demo' style='display: none'>A congruencia no teu comportamento é algo que não o tendo, tem valor!!</p>  
+                </div>
+            </div>
+            
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById("not-button").addEventListener("mouseover", function(){
+                var button = document.getElementById("not-button");
+                var changeTop = (Math.random() * (button.parentElement.offsetHeight - button.offsetHeight));
+                var changeLeft = (Math.random() * (button.parentElement.offsetWidth - button.offsetWidth));
+                button.style.marginTop = changeTop +"px";
+                button.style.marginLeft = changeLeft +"px"; 
+            });
+
+            document.getElementById("not-button").addEventListener("click", function(){
+                var button = document.getElementById("not-button");
+                var changeTop = (Math.random() * (button.parentElement.offsetHeight - button.offsetHeight));
+                var changeLeft = (Math.random() * (button.parentElement.offsetWidth - button.offsetWidth));
+                button.style.marginTop = changeTop +"px";
+                button.style.marginLeft = changeLeft +"px"; 
+            });
+
+            document.getElementById("ye-button").addEventListener("click", function(){
+                var text = document.getElementById("demo");
+                if (text.style.display === "none") {
+                    text.style.display = "block";
+                }
+            });
+
+        </script>
+    </body>
+</html>
